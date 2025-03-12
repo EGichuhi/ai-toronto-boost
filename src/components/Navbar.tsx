@@ -8,8 +8,9 @@ const Navbar = () => {
 
   const navItems = [
     { href: "#services", label: "Services" },
+    { href: "#for-business", label: "For Business" },
+    { href: "#for-individual", label: "For Individual" },
     { href: "#benefits", label: "Benefits" },
-    { href: "#cases", label: "Case Studies" },
     { href: "#careers", label: "Careers" },
     { href: "#consultation", label: "Get Quote" },
   ];

@@ -5,7 +5,7 @@ import {
   ArrowRight, Bot, Building, ChartBar, Clock, Database, 
   MessageSquare, Briefcase, Users, Mail, CheckCircle, GraduationCap,
   Zap, Shield, Network
-} from "lucide-react";
+} from 'lucide-react';
 
 export default function Index() {
   return (
@@ -30,6 +30,64 @@ export default function Index() {
               Book Free Consultation
               <ArrowRight className="ml-2" />
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* For Business Section */}
+      <section id="for-business" className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Enterprise Solutions</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="p-8 hover:shadow-lg transition-shadow bg-white/80 backdrop-blur-sm">
+              <Building className="w-12 h-12 text-primary mb-4" />
+              <h3 className="text-2xl font-semibold mb-4">Scale Your Operations</h3>
+              <p className="text-gray-600 mb-6">
+                Transform your business processes with enterprise-grade AI solutions designed for scaling companies.
+              </p>
+              <ul className="space-y-3">
+                {['Custom AI Integration', 'Process Automation', 'Enterprise Analytics'].map((feature) => (
+                  <li key={feature} className="flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-secondary" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </Card>
+            <div className="space-y-6">
+              <Card className="p-6 hover:shadow-lg transition-shadow bg-white/80 backdrop-blur-sm">
+                <h4 className="text-xl font-semibold mb-2">Enterprise Support</h4>
+                <p className="text-gray-600">Dedicated team for your business needs</p>
+              </Card>
+              <Card className="p-6 hover:shadow-lg transition-shadow bg-white/80 backdrop-blur-sm">
+                <h4 className="text-xl font-semibold mb-2">Custom Solutions</h4>
+                <p className="text-gray-600">Tailored AI implementations for your workflow</p>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* For Individual Section */}
+      <section id="for-individual" className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Individual Solutions</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-6 hover:shadow-lg transition-shadow bg-gradient-to-br from-primary/5 to-blue-50">
+              <Users className="w-12 h-12 text-primary mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Freelancers</h3>
+              <p className="text-gray-600">Automate your workflow and focus on what matters</p>
+            </Card>
+            <Card className="p-6 hover:shadow-lg transition-shadow bg-gradient-to-br from-primary/5 to-blue-50">
+              <Briefcase className="w-12 h-12 text-primary mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Consultants</h3>
+              <p className="text-gray-600">Enhance your services with AI-powered tools</p>
+            </Card>
+            <Card className="p-6 hover:shadow-lg transition-shadow bg-gradient-to-br from-primary/5 to-blue-50">
+              <GraduationCap className="w-12 h-12 text-primary mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Entrepreneurs</h3>
+              <p className="text-gray-600">Scale your business with smart automation</p>
+            </Card>
           </div>
         </div>
       </section>
@@ -100,36 +158,6 @@ export default function Index() {
                   <p className="text-gray-600">{benefit.description}</p>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Case Studies Section */}
-      <section id="cases" className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Success Stories</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "Manufacturing Efficiency",
-                industry: "Manufacturing",
-                results: "40% reduction in processing time",
-                description: "Implemented AI-driven quality control and inventory management.",
-              },
-              {
-                title: "Customer Service Enhancement",
-                industry: "Retail",
-                results: "24/7 support coverage",
-                description: "Deployed intelligent chatbots for consistent customer support.",
-              },
-            ].map((study, index) => (
-              <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold mb-2">{study.title}</h3>
-                <p className="text-gray-600 mb-4">Industry: {study.industry}</p>
-                <p className="text-secondary font-semibold mb-2">{study.results}</p>
-                <p className="text-gray-600">{study.description}</p>
-              </Card>
             ))}
           </div>
         </div>
@@ -245,4 +273,3 @@ export default function Index() {
     </div>
   );
 }
-
