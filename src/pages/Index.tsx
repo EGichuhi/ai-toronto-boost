@@ -17,16 +17,16 @@ export default function Index() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="inline-block mb-4">
-              <Zap className="w-12 h-12 text-primary animate-pulse" />
+              <Zap className="w-12 h-12 text-blue-500 animate-pulse" />
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">
               Transform Your Business with AI Automation
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Empower your business with custom AI solutions designed to streamline operations, 
               reduce costs, and accelerate growth.
             </p>
-            <Button className="bg-primary hover:bg-primary/90 text-lg px-8 py-6">
+            <Button className="bg-blue-500 hover:bg-blue-600 text-lg px-8 py-6">
               Book Free Consultation
               <ArrowRight className="ml-2" />
             </Button>
