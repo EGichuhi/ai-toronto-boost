@@ -3,24 +3,28 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { 
   ArrowRight, Bot, Building, ChartBar, Clock, Database, 
-  MessageSquare, Briefcase, Users, Mail, CheckCircle, GraduationCap
+  MessageSquare, Briefcase, Users, Mail, CheckCircle, GraduationCap,
+  Zap, Shield, Network
 } from "lucide-react";
 
 export default function Index() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-white to-blue-50">
+      <section className="pt-32 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Transform Your Toronto Business with AI Automation
+            <div className="inline-block mb-4">
+              <Zap className="w-12 h-12 text-primary animate-pulse" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">
+              Transform Your Business with AI Automation
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Empower your small or medium business with custom AI solutions. 
-              Streamline operations, reduce costs, and grow faster.
+              Empower your business with custom AI solutions designed to streamline operations, 
+              reduce costs, and accelerate growth.
             </p>
             <Button className="bg-primary hover:bg-primary/90 text-lg px-8 py-6">
               Book Free Consultation
@@ -31,28 +35,31 @@ export default function Index() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 bg-white">
+      <section id="services" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our AI Solutions</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Our AI Solutions</h2>
+          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            Cutting-edge AI automation solutions tailored for modern businesses
+          </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Customer Service AI",
-                description: "24/7 automated customer support with human-like interactions",
+                title: "Intelligent Customer Service",
+                description: "24/7 automated support with human-like interactions",
                 icon: MessageSquare,
               },
               {
-                title: "Data Analysis",
-                description: "Turn your business data into actionable insights",
+                title: "Predictive Analytics",
+                description: "Transform your data into actionable business insights",
                 icon: ChartBar,
               },
               {
                 title: "Process Automation",
-                description: "Streamline repetitive tasks and workflows",
+                description: "Streamline workflows with AI-powered automation",
                 icon: Bot,
               },
             ].map((service, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+              <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white/50 backdrop-blur-sm border border-gray-100">
                 <service.icon className="w-12 h-12 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                 <p className="text-gray-600">{service.description}</p>
@@ -63,7 +70,7 @@ export default function Index() {
       </section>
 
       {/* Benefits Section */}
-      <section id="benefits" className="py-20 px-4 bg-gray-50">
+      <section id="benefits" className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Why Choose Us
@@ -71,23 +78,23 @@ export default function Index() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Local Expertise",
-                description: "Deep understanding of Toronto's business landscape",
-                icon: Building,
+                title: "Enterprise Security",
+                description: "Bank-grade security protocols for your business data",
+                icon: Shield,
               },
               {
-                title: "Quick Implementation",
-                description: "Get your AI solutions up and running in weeks, not months",
+                title: "Rapid Deployment",
+                description: "Get your AI solutions running in weeks, not months",
                 icon: Clock,
               },
               {
-                title: "Data Security",
-                description: "Enterprise-grade security for your business data",
-                icon: Database,
+                title: "Seamless Integration",
+                description: "Connect with your existing tools and workflows",
+                icon: Network,
               },
             ].map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-4">
-                <benefit.icon className="w-6 h-6 text-secondary flex-shrink-0" />
+              <div key={index} className="flex items-start space-x-4 p-6 rounded-lg hover:bg-white/50 transition-colors">
+                <benefit.icon className="w-6 h-6 text-primary flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
@@ -222,13 +229,13 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-primary text-white">
+      <section className="py-20 px-4 bg-gradient-to-br from-primary to-blue-600 text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Automate Your Business?
+            Ready to Transform Your Business?
           </h2>
-          <p className="text-xl mb-8 opacity-90">
-            Join other Toronto businesses already benefiting from AI automation
+          <p className="text-xl mb-8 text-white/90">
+            Join innovative businesses already benefiting from AI automation
           </p>
           <Button className="bg-white text-primary hover:bg-gray-100 text-lg px-8 py-6">
             Schedule Your Free Consultation
@@ -238,3 +245,4 @@ export default function Index() {
     </div>
   );
 }
+
