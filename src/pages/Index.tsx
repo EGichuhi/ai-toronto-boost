@@ -9,13 +9,13 @@ import {
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-[#06021C] text-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#0F172A] to-[#1E293B] text-white">
       <Navbar />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#2D1B69] via-[#06021C] to-[#06021C] z-0" />
-        <div className="absolute top-0 left-1/2 w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/2 bg-[#2D1B69] rounded-full blur-[120px] opacity-20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1E293B]/80 via-[#0F172A] to-[#0F172A] z-0" />
+        <div className="absolute top-0 left-1/2 w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/2 bg-primary/20 rounded-full blur-[120px] opacity-20" />
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center">
             <div className="inline-block mb-4">
@@ -38,8 +38,8 @@ export default function Index() {
 
       {/* Services Section */}
       <section id="services" className="py-20 px-4 relative">
-        <div className="absolute inset-0 bg-[#06021C]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#2D1B69]/20 to-transparent" />
+        <div className="absolute inset-0 bg-[#0F172A]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1E293B]/20 to-transparent" />
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">Our AI Solutions</h2>
           <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto">
@@ -78,7 +78,7 @@ export default function Index() {
                 icon: Database,
               },
             ].map((service, index) => (
-              <Card key={index} className="p-6 hover:scale-105 transition-all duration-300 bg-gradient-to-br from-[#2D1B69]/50 to-[#06021C]/50 backdrop-blur-xl border border-white/10">
+              <Card key={index} className="p-6 hover:scale-105 transition-all duration-300 bg-secondary/10 backdrop-blur-xl border border-secondary/20">
                 <service.icon className="w-12 h-12 text-[#7B4AE2] mb-4" />
                 <h3 className="text-xl font-semibold mb-2 text-white">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
@@ -90,11 +90,11 @@ export default function Index() {
 
       {/* For Business Section */}
       <section id="for-business" className="py-20 px-4 relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#2D1B69]/20 via-[#06021C] to-[#06021C]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1E293B]/20 via-[#0F172A] to-[#0F172A]" />
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Enterprise Solutions</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-8 bg-gradient-to-br from-[#2D1B69]/50 to-[#06021C]/50 backdrop-blur-xl border border-white/10 hover:scale-105 transition-all duration-300">
+            <Card className="p-8 bg-secondary/10 backdrop-blur-xl border border-secondary/20 hover:scale-105 transition-all duration-300">
               <Building className="w-12 h-12 text-[#7B4AE2] mb-4" />
               <h3 className="text-2xl font-semibold mb-4 text-white">Enterprise AI Integration</h3>
               <p className="text-gray-300 mb-6">
@@ -115,11 +115,11 @@ export default function Index() {
               </ul>
             </Card>
             <div className="space-y-6">
-              <Card className="p-6 bg-gradient-to-br from-[#2D1B69]/50 to-[#06021C]/50 backdrop-blur-xl border border-white/10 hover:scale-105 transition-all duration-300">
+              <Card className="p-6 bg-secondary/10 backdrop-blur-xl border border-secondary/20 hover:scale-105 transition-all duration-300">
                 <h4 className="text-xl font-semibold mb-2 text-white">24/7 Enterprise Support</h4>
                 <p className="text-gray-300">Round-the-clock support and monitoring for your AI systems</p>
               </Card>
-              <Card className="p-6 bg-gradient-to-br from-[#2D1B69]/50 to-[#06021C]/50 backdrop-blur-xl border border-white/10 hover:scale-105 transition-all duration-300">
+              <Card className="p-6 bg-secondary/10 backdrop-blur-xl border border-secondary/20 hover:scale-105 transition-all duration-300">
                 <h4 className="text-xl font-semibold mb-2 text-white">Custom Solutions</h4>
                 <p className="text-gray-300">Tailored AI implementations for your specific needs</p>
               </Card>
@@ -130,21 +130,21 @@ export default function Index() {
 
       {/* For Individual Section */}
       <section id="for-individual" className="py-20 px-4 relative">
-        <div className="absolute inset-0 bg-[#06021C]" />
+        <div className="absolute inset-0 bg-[#0F172A]" />
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Solutions for Professionals</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-6 hover:scale-105 transition-shadow bg-gradient-to-br from-[#2D1B69]/50 to-[#06021C]/50 backdrop-blur-xl border border-white/10">
+            <Card className="p-6 hover:scale-105 transition-shadow bg-secondary/10 backdrop-blur-xl border border-secondary/20">
               <Users className="w-12 h-12 text-[#7B4AE2] mb-4" />
               <h3 className="text-xl font-semibold mb-2 text-white">Independent Consultants</h3>
               <p className="text-gray-300">Enhance your consulting practice with AI-powered insights</p>
             </Card>
-            <Card className="p-6 hover:scale-105 transition-shadow bg-gradient-to-br from-[#2D1B69]/50 to-[#06021C]/50 backdrop-blur-xl border border-white/10">
+            <Card className="p-6 hover:scale-105 transition-shadow bg-secondary/10 backdrop-blur-xl border border-secondary/20">
               <Briefcase className="w-12 h-12 text-[#7B4AE2] mb-4" />
               <h3 className="text-xl font-semibold mb-2 text-white">Small Businesses</h3>
               <p className="text-gray-300">Affordable AI solutions scaled for smaller operations</p>
             </Card>
-            <Card className="p-6 hover:scale-105 transition-shadow bg-gradient-to-br from-[#2D1B69]/50 to-[#06021C]/50 backdrop-blur-xl border border-white/10">
+            <Card className="p-6 hover:scale-105 transition-shadow bg-secondary/10 backdrop-blur-xl border border-secondary/20">
               <Shield className="w-12 h-12 text-[#7B4AE2] mb-4" />
               <h3 className="text-xl font-semibold mb-2 text-white">Startups</h3>
               <p className="text-gray-300">Future-proof your startup with cutting-edge AI technology</p>
@@ -155,7 +155,7 @@ export default function Index() {
 
       {/* Benefits Section */}
       <section id="benefits" className="py-20 px-4 relative">
-        <div className="absolute inset-0 bg-[#06021C]" />
+        <div className="absolute inset-0 bg-[#0F172A]" />
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
             Why Choose fitiAI
@@ -192,7 +192,7 @@ export default function Index() {
 
       {/* Consultation Section */}
       <section id="consultation" className="py-20 px-4 relative">
-        <div className="absolute inset-0 bg-[#06021C]" />
+        <div className="absolute inset-0 bg-[#0F172A]" />
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -228,7 +228,7 @@ export default function Index() {
                 ))}
               </div>
             </div>
-            <Card className="p-8 bg-gradient-to-br from-[#2D1B69]/50 to-[#06021C]/50 backdrop-blur-xl border border-white/10">
+            <Card className="p-8 bg-secondary/10 backdrop-blur-xl border border-secondary/20">
               <h3 className="text-2xl font-semibold mb-6 text-white">Schedule Your Call</h3>
               <form className="space-y-4">
                 <div>
@@ -259,8 +259,8 @@ export default function Index() {
 
       {/* CTA Section */}
       <section className="py-20 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#2D1B69] to-[#06021C]" />
-        <div className="absolute top-0 left-1/2 w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2 bg-[#7B4AE2] rounded-full blur-[120px] opacity-20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1E293B] to-[#0F172A]" />
+        <div className="absolute top-0 left-1/2 w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2 bg-primary/20 rounded-full blur-[120px] opacity-20" />
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Ready to Transform Your Business?
