@@ -2,9 +2,9 @@ import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { 
-  ArrowRight, Bot, Building, ChartBar, Clock, Database, 
-  MessageSquare, Briefcase, Users, Mail, CheckCircle, GraduationCap,
-  Zap, Shield, Network
+  ArrowRight, Bot, Building, ChartBar, 
+  MessageSquare, Briefcase, Users, Mail, CheckCircle, 
+  Zap, Shield, Network, BrainCircuit, Cpu, Database
 } from 'lucide-react';
 
 export default function Index() {
@@ -34,21 +34,76 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section id="services" className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Our AI Solutions</h2>
+          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            Cutting-edge AI services to revolutionize your business operations
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "AI Strategy Consulting",
+                description: "Expert guidance on implementing AI solutions for your specific business needs",
+                icon: BrainCircuit,
+              },
+              {
+                title: "Large Language Models",
+                description: "Custom LLM solutions for automation and natural language processing",
+                icon: Cpu,
+              },
+              {
+                title: "Process Automation",
+                description: "Streamline operations with intelligent workflow automation",
+                icon: Bot,
+              },
+              {
+                title: "Data Analytics",
+                description: "Transform raw data into actionable business insights",
+                icon: ChartBar,
+              },
+              {
+                title: "AI Integration",
+                description: "Seamless integration of AI solutions with your existing systems",
+                icon: Network,
+              },
+              {
+                title: "Custom AI Development",
+                description: "Tailored AI solutions built for your specific requirements",
+                icon: Database,
+              },
+            ].map((service, index) => (
+              <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white/50 backdrop-blur-sm border border-gray-100">
+                <service.icon className="w-12 h-12 text-blue-500 mb-4" />
+                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                <p className="text-gray-600">{service.description}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* For Business Section */}
       <section id="for-business" className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Enterprise Solutions</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="p-8 hover:shadow-lg transition-shadow bg-white/80 backdrop-blur-sm">
-              <Building className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-2xl font-semibold mb-4">Scale Your Operations</h3>
+              <Building className="w-12 h-12 text-blue-500 mb-4" />
+              <h3 className="text-2xl font-semibold mb-4">Enterprise AI Integration</h3>
               <p className="text-gray-600 mb-6">
-                Transform your business processes with enterprise-grade AI solutions designed for scaling companies.
+                Comprehensive AI solutions designed for large-scale enterprises, featuring custom implementation and dedicated support.
               </p>
               <ul className="space-y-3">
-                {['Custom AI Integration', 'Process Automation', 'Enterprise Analytics'].map((feature) => (
+                {[
+                  'Custom AI Models Development',
+                  'Enterprise-wide Integration',
+                  'Dedicated Support Team',
+                  'Scalable Infrastructure',
+                ].map((feature) => (
                   <li key={feature} className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-secondary" />
+                    <CheckCircle className="w-5 h-5 text-blue-500" />
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -56,12 +111,12 @@ export default function Index() {
             </Card>
             <div className="space-y-6">
               <Card className="p-6 hover:shadow-lg transition-shadow bg-white/80 backdrop-blur-sm">
-                <h4 className="text-xl font-semibold mb-2">Enterprise Support</h4>
-                <p className="text-gray-600">Dedicated team for your business needs</p>
+                <h4 className="text-xl font-semibold mb-2">24/7 Enterprise Support</h4>
+                <p className="text-gray-600">Round-the-clock support and monitoring for your AI systems</p>
               </Card>
               <Card className="p-6 hover:shadow-lg transition-shadow bg-white/80 backdrop-blur-sm">
                 <h4 className="text-xl font-semibold mb-2">Custom Solutions</h4>
-                <p className="text-gray-600">Tailored AI implementations for your workflow</p>
+                <p className="text-gray-600">Tailored AI implementations for your specific needs</p>
               </Card>
             </div>
           </div>
@@ -71,58 +126,23 @@ export default function Index() {
       {/* For Individual Section */}
       <section id="for-individual" className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Individual Solutions</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Solutions for Professionals</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-6 hover:shadow-lg transition-shadow bg-gradient-to-br from-primary/5 to-blue-50">
-              <Users className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Freelancers</h3>
-              <p className="text-gray-600">Automate your workflow and focus on what matters</p>
+            <Card className="p-6 hover:shadow-lg transition-shadow bg-gradient-to-br from-blue-50 to-indigo-50">
+              <Users className="w-12 h-12 text-blue-500 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Independent Consultants</h3>
+              <p className="text-gray-600">Enhance your consulting practice with AI-powered insights</p>
             </Card>
-            <Card className="p-6 hover:shadow-lg transition-shadow bg-gradient-to-br from-primary/5 to-blue-50">
-              <Briefcase className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Consultants</h3>
-              <p className="text-gray-600">Enhance your services with AI-powered tools</p>
+            <Card className="p-6 hover:shadow-lg transition-shadow bg-gradient-to-br from-blue-50 to-indigo-50">
+              <Briefcase className="w-12 h-12 text-blue-500 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Small Businesses</h3>
+              <p className="text-gray-600">Affordable AI solutions scaled for smaller operations</p>
             </Card>
-            <Card className="p-6 hover:shadow-lg transition-shadow bg-gradient-to-br from-primary/5 to-blue-50">
-              <GraduationCap className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Entrepreneurs</h3>
-              <p className="text-gray-600">Scale your business with smart automation</p>
+            <Card className="p-6 hover:shadow-lg transition-shadow bg-gradient-to-br from-blue-50 to-indigo-50">
+              <Shield className="w-12 h-12 text-blue-500 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Startups</h3>
+              <p className="text-gray-600">Future-proof your startup with cutting-edge AI technology</p>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Our AI Solutions</h2>
-          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Cutting-edge AI automation solutions tailored for modern businesses
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Intelligent Customer Service",
-                description: "24/7 automated support with human-like interactions",
-                icon: MessageSquare,
-              },
-              {
-                title: "Predictive Analytics",
-                description: "Transform your data into actionable business insights",
-                icon: ChartBar,
-              },
-              {
-                title: "Process Automation",
-                description: "Streamline workflows with AI-powered automation",
-                icon: Bot,
-              },
-            ].map((service, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white/50 backdrop-blur-sm border border-gray-100">
-                <service.icon className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
@@ -131,61 +151,34 @@ export default function Index() {
       <section id="benefits" className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Why Choose Us
+            Why Choose fitiAI
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 title: "Enterprise Security",
-                description: "Bank-grade security protocols for your business data",
+                description: "Bank-grade security protocols and data protection",
                 icon: Shield,
               },
               {
-                title: "Rapid Deployment",
+                title: "Fast Implementation",
                 description: "Get your AI solutions running in weeks, not months",
-                icon: Clock,
+                icon: Zap,
               },
               {
                 title: "Seamless Integration",
-                description: "Connect with your existing tools and workflows",
+                description: "Works with your existing tools and systems",
                 icon: Network,
               },
             ].map((benefit, index) => (
               <div key={index} className="flex items-start space-x-4 p-6 rounded-lg hover:bg-white/50 transition-colors">
-                <benefit.icon className="w-6 h-6 text-primary flex-shrink-0" />
+                <benefit.icon className="w-6 h-6 text-blue-500 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Careers Section */}
-      <section id="careers" className="py-20 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Join Our Team</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <GraduationCap className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">AI Engineers</h3>
-              <p className="text-gray-600 mb-4">Build cutting-edge AI solutions for our clients</p>
-              <Button variant="outline" className="w-full">View Position</Button>
-            </Card>
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <Users className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Solution Architects</h3>
-              <p className="text-gray-600 mb-4">Design scalable automation solutions</p>
-              <Button variant="outline" className="w-full">View Position</Button>
-            </Card>
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <Briefcase className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Business Analysts</h3>
-              <p className="text-gray-600 mb-4">Bridge business needs with technical solutions</p>
-              <Button variant="outline" className="w-full">View Position</Button>
-            </Card>
           </div>
         </div>
       </section>
@@ -257,7 +250,7 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-primary to-blue-600 text-white">
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-500 to-violet-600 text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Your Business?
@@ -265,7 +258,7 @@ export default function Index() {
           <p className="text-xl mb-8 text-white/90">
             Join innovative businesses already benefiting from AI automation
           </p>
-          <Button className="bg-white text-primary hover:bg-gray-100 text-lg px-8 py-6">
+          <Button className="bg-white text-blue-500 hover:bg-gray-100 text-lg px-8 py-6">
             Schedule Your Free Consultation
           </Button>
         </div>
